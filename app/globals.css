@@ -1,26 +1,227 @@
 @import "tailwindcss";
 
+/* 🌞 Light Mode (default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 200 5% 91%;
+  --foreground: 0 0% 3.9%;
+  --card: 200 5% 85%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 200 5% 85%;
+  --popover-foreground: 0 0% 3.9%;
+  --muted: 200 5% 89%;
+  --muted-foreground: 200 5% 34%;
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 200 5% 79%;
+  --input: 200 5% 79%;
+  --ring: 200 5% 79%;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --radius: 0.5rem;
+}
+
+/* 🌚 Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 200 5% 11%;
+    --foreground: 0 0% 98%;
+    --card: 200 5% 15%;
+    --card-foreground: 0 0% 98%;
+    --popover: 200 5% 15%;
+    --popover-foreground: 0 0% 98%;
+    --muted: 200 5% 16%;
+    --muted-foreground: 0 0% 56%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 200 5% 21%;
+    --input: 200 5% 21%;
+    --ring: 200 5% 21%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --radius: var(--radius);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--background) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--foreground) / var(--tw-text-opacity));
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.prose {
+  --tw-prose-body: hsl(var(--muted-foreground));
+  /* Use custom CSS variables */
+  --tw-prose-headings: hsl(var(--primary));
+  /* Custom color for headings */
+  --tw-prose-lead: hsl(var(--muted-foreground));
+  --tw-prose-links: hsl(var(--primary));
+  --tw-prose-bold: hsl(var(--primary));
+  --tw-prose-counters: hsl(var(--muted-foreground));
+  --tw-prose-bullets: hsl(var(--muted));
+  --tw-prose-hr: hsl(var(--border));
+  --tw-prose-quotes: hsl(var(--primary));
+  --tw-prose-quote-borders: hsl(var(--border));
+  --tw-prose-captions: hsl(var(--muted-foreground));
+  --tw-prose-kbd: hsl(var(--primary));
+  --tw-prose-kbd-shadows: 17 24 39;
+  --tw-prose-code: hsl(var(--primary));
+  --tw-prose-pre-code: hsl(var(--border));
+  --tw-prose-pre-bg: hsl(var(--card));
+  --tw-prose-th-borders: hsl(var(--border));
+  --tw-prose-td-borders: hsl(var(--card));
+  --tw-prose-invert-body: hsl(var(--muted-foreground));
+  --tw-prose-invert-headings: hsl(var(--primary-foreground));
+  --tw-prose-invert-lead: hsl(var(--muted-foreground));
+  --tw-prose-invert-links: hsl(var(--primary-foreground));
+  --tw-prose-invert-bold: hsl(var(--primary-foreground));
+  --tw-prose-invert-counters: hsl(var(--muted-foreground));
+  --tw-prose-invert-bullets: hsl(var(--muted));
+  --tw-prose-invert-hr: hsl(var(--border));
+  --tw-prose-invert-quotes: hsl(var(--secondary-foreground));
+  --tw-prose-invert-quote-borders: hsl(var(--border));
+  --tw-prose-invert-captions: hsl(var(--secondary-foreground));
+  --tw-prose-invert-kbd: hsl(var(--primary-foreground));
+  --tw-prose-invert-kbd-shadows: 255 255 255;
+  --tw-prose-invert-code: hsl(var(--primary-foreground));
+  --tw-prose-invert-pre-code: hsl(var(--border));
+  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+  --tw-prose-invert-th-borders: hsl(var(--muted));
+  --tw-prose-invert-td-borders: hsl(var(--border));
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.dark .bg-haze-700\/15 {
+  background-color: hsl(262deg, 18.3%, 46.1%, 0.15);
+}
+
+.before\:content-\[\"\/\"\]::before {
+  --tw-content: "/";
+  content: var(--tw-content);
+}
+
+.max-w-screen-xs {
+  max-width: 500px;
+}
+
+.max-w-screen-md {
+  max-width: 750px
+}
+
+.text-muted-foreground {
+  --tw-text-opacity: 1;
+  color: hsl(var(--muted-foreground)/var(--tw-text-opacity, 1));
+}
+
+.text-muted-foreground\/60 {
+  color: hsl(var(--muted-foreground)/.6);
+}
+
+.border-foreground\/5 {
+  border-color: hsl(var(--foreground)/.05);
+}
+
+.ring-ring {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: hsl(var(--ring)/var(--tw-ring-opacity, 1));
+}
+
+.bg-background {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--background)/var(--tw-bg-opacity, 1));
+}
+
+@keyframes shadowPulseBlue {
+  0% {
+    box-shadow: 0 2px 0 rgba(59, 130, 246, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 2px 2px rgba(59, 130, 246, 0.4);
+  }
+
+  100% {
+    box-shadow: 0 2px 0 rgba(59, 130, 246, 0.1);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes shadowPulsePurple {
+  0% {
+    box-shadow: 0 2px 0 rgba(124, 58, 237, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 2px 2px rgba(124, 58, 237, 0.4);
+  }
+
+  100% {
+    box-shadow: 0 2px 0 rgba(124, 58, 237, 0.1);
+  }
+}
+
+.shadow-animate-blue {
+  animation: shadowPulseBlue 2s infinite alternate ease-in-out;
+}
+
+.shadow-animate-purple {
+  animation: shadowPulsePurple 2s infinite alternate ease-in-out;
+}
+
+.shadow-animate-pink {
+  animation: shadowPulsePink 2s infinite alternate ease-in-out;
+}
+
+.mix-blend-overlay {
+  mix-blend-mode: overlay;
+}
+
+.border-border {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--border)/var(--tw-border-opacity, 1));
+}
+
+@keyframes shadowPulsePink {
+  0% {
+    box-shadow: 0 2px 0 rgba(236, 72, 153, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 2px 2px rgba(236, 72, 153, 0.4);
+  }
+
+  100% {
+    box-shadow: 0 2px 0 rgba(236, 72, 153, 0.1);
+  }
 }
