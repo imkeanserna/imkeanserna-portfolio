@@ -30,8 +30,36 @@
 }
 
 /* 🌚 Dark Mode */
+:root[data-theme="dark"] {
+  --background: 200 5% 11%;
+  --foreground: 0 0% 98%;
+  --card: 200 5% 15%;
+  --card-foreground: 0 0% 98%;
+  --popover: 200 5% 15%;
+  --popover-foreground: 0 0% 98%;
+  --muted: 200 5% 16%;
+  --muted-foreground: 0 0% 56%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 0 0% 9%;
+  --secondary: 0 0% 14.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 0 0% 14.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 200 5% 21%;
+  --input: 200 5% 21%;
+  --ring: 200 5% 21%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+}
+
+/* 🌚 Dark Mode */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
     --background: 200 5% 11%;
     --foreground: 0 0% 98%;
     --card: 200 5% 15%;
@@ -139,6 +167,26 @@ body {
 .max-w-screen-md {
   max-width: 750px
 }
+
+.text-foreground {
+  --tw-text-opacity: 1;
+  color: hsl(var(--foreground)/var(--tw-text-opacity, 1))
+}
+
+.text-foreground\/80 {
+  color: hsl(var(--foreground)/.8)
+}
+
+.from-muted\/100 {
+  --tw-gradient-from: hsl(var(--muted)/1) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(var(--muted)/0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-muted\/0 {
+  --tw-gradient-to: hsl(var(--muted)/0) var(--tw-gradient-to-position);
+}
+
 
 .text-muted-foreground {
   --tw-text-opacity: 1;
