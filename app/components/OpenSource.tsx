@@ -205,7 +205,7 @@ type ContributionsDialogProps = {
 function ContributionsDialog({ open, onOpenChange, theme, contribution }: ContributionsDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="border border-border max-w-screen-sm min-h-96 px-8">
+      <DialogContent className="border border-border max-w-screen-sm min-h-96 px-8 !rounded-xl">
         <DialogHeader className="space-y-6">
           <DialogTitle className="text-xl">Open Source Contributions on {contribution.name}</DialogTitle>
           <div className="space-y-3">
