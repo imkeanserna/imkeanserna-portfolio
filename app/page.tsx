@@ -1,7 +1,8 @@
 import About from "@/components/About";
 import Socials from "@/components/Socials";
 import Projects from "@/components/Projects";
-import WorkExperience from "./components/WorkExperience";
+import WorkExperience from "@/components/WorkExperience";
+import OpenSource from "@/components/OpenSource";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Socials />
       <WorkExperience />
       <Projects />
+      <OpenSource />
     </main>
   );
 }

@@ -13,7 +13,7 @@ export default function Projects() {
   return (
     <div className="flex flex-col">
       <section className="mx-auto w-full sm:px-8 max-w-screen-md grid sm:grid-cols-[75px_1fr] gap-x-6 gap-y-4 py-0 items-start">
-        <h2 className="sm:text-right font-mono font-normal mt-2 text-muted-foreground/60 text-xs lowercase tracking-tight before:content-[&quot;/&quot;] my-0 leading-[1.5] inline align-middle">
+        <h2 className="sm:text-left font-mono font-normal mt-2 text-muted-foreground/60 text-xs lowercase tracking-tight before:content-[&quot;/&quot;] my-0 leading-[1.5] inline align-middle">
           Projects
         </h2>
         <div className="grid gap-4 sm:grid-cols-2">
@@ -69,7 +69,7 @@ export function ProjectCard({ name, description, githubUrl, websiteUrl, isFirst 
             : "from-white/5 to-neutral-900/50"
           }`}
       ></div>
-    </div >
+    </div>
   );
 }
 
