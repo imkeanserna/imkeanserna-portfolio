@@ -20,8 +20,9 @@ export const aboutContent = {
   hobbies: {
     intro: "When I'm not shipping products, I enjoy creating content",
     instagram: InstagramIcon,
-    closing: "on instagram and shooting hoops on the court.",
-    basketball: BasketballIcon
+    middle: "on instagram and shooting hoops",
+    basketball: BasketballIcon,
+    closing: "on the court."
   },
   github: {
     today: "2025-04-07",

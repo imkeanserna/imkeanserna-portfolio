@@ -50,8 +50,9 @@ export default function About() {
             <p>
               {hobbies.intro}{" "}
               <InstagramIcon />{" "}
-              {hobbies.closing}{" "}
-              <BasketballIcon />
+              {hobbies.middle}{" "}
+              <BasketballIcon />{" "}
+              {hobbies.closing}
             </p>
           </div>
           <GithubChart />

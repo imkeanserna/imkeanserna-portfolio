@@ -39,7 +39,7 @@ export function GithubChart() {
           totalCount: '{{count}} contributions in the last six months',
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-bl mix-blend-overlay from-neutral-400 to-neutral-700"></div>
+      <div className={`absolute inset-0 bg-gradient-to-bl mix-blend-overlay ${theme === "dark" ? "from-neutral-400 to-neutral-700" : "from-white/5 to-neutral-900/50"}`}></div>
     </div>
   );
 }

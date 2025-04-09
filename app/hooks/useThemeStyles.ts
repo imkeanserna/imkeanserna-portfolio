@@ -16,9 +16,9 @@ export function useThemeStyles() {
     // Interactive elements styles
     interactive: {
       ring: theme === "dark"
-        ? "group-hover:ring-white/20 group-focus:ring-white/20 ring-offset-gray-900 group-focus:ring-offset-1"
-        : "group-hover:ring-gray-500/20 group-focus:ring-black/20 ring-offset-white group-focus:ring-offset-1",
-      background: theme === "dark" ? "dark:bg-gradient-to-bl" : ""
+        ? "group-hover:ring-white/20 group-focus:ring-white/20 ring-offset-gray-900"
+        : "group-hover:ring-gray-500/20 group-focus:ring-black/20 ring-offset-white",
+      background: theme === "dark" ? "bg-gradient-to-bl" : ""
     }
   };
 }
