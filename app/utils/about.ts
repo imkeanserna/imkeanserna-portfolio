@@ -7,6 +7,8 @@ export const aboutContent = {
   me: {
     name: "Kean Serna",
     avatar: "https://media.licdn.com/dms/image/v2/D5603AQGbZDgzSCOz4A/profile-displayphoto-shrink_800_800/B56ZQqUDG3GQAk-/0/1735876686919?e=1749686400&v=beta&t=NLKAYSafJmg06xs3m-R6c9hEAcjlmI4-MLtekWYhBs4",
+    github: "https://github.com/imkeanserna",
+    linkedin: "https://www.linkedin.com/in/kean-de-la-serna-b7a182260/"
   },
   experience: "I have been building software in",
   tags: {
