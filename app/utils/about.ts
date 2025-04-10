@@ -30,5 +30,8 @@ export const aboutContent = {
   github: {
     today: "2025-04-07",
     username: "imkeanserna"
+  },
+  resume: {
+    url: "https://www.linkedin.com/in/kean-serna-b7a182260/"
   }
 };
