@@ -32,7 +32,7 @@ export default function RootLayout({
       </head>
       <body
         className={`antialiased ${geistSans.variable} ${geistMono.variable}
-        relative flex h-full flex-col pt-[2rem] pb-[10rem] sm:pt-[6rem] sm:pb-[8rem]">
+        relative flex h-full flex-col pt-[4rem] pb-[8rem] sm:pt-[6rem] sm:pb-[10rem]
       `}
       >
         <ThemeProvider>

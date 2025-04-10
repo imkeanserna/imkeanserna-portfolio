@@ -6,7 +6,7 @@ import { socialLinks } from "@/utils/social";
 export default function Socials() {
   return (
     <div className="flex flex-col">
-      <section className="mx-auto w-full sm:px-8 max-w-screen-md grid sm:grid-cols-[75px_1fr] gap-x-6 gap-y-4">
+      <section className="mx-auto w-full px-5 sm:px-8 max-w-screen-md grid sm:grid-cols-[75px_1fr] gap-x-6 gap-y-4">
         <h2 className="sm:text-left font-mono font-normal mt-2 text-muted-foreground/60 text-xs lowercase tracking-tight before:content-[&quot;/&quot;] my-0 leading-[1.5] inline align-middle">
           Socials
         </h2>

@@ -25,7 +25,7 @@ export function GithubChart() {
   };
 
   return (
-    <div className="border border-border relative flex flex-col justify-center overflow-hidden bg-background items-center border-foreground/5 w-full rounded p-2 mt-5">
+    <div className="border border-border relative flex flex-col justify-center overflow-hidden bg-background items-center border-foreground/5 w-[350px] sm:w-full rounded p-2 mt-5">
       <GitHubCalendar
         username={github.username}
         blockRadius={3}
