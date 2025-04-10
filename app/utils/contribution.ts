@@ -1,3 +1,5 @@
+import { aboutContent } from "@/utils/about";
+
 export type Contribution = {
   name: string;
   url: string;
@@ -27,14 +29,14 @@ export const contributionsData: Contribution[] = [
         title: "message_feed: Fix muted banner visibility for empty feed.",
         prNumber: "31601",
         username: "imkeanserna",
-        imageUrl: "https://avatars.githubusercontent.com/u/156565248?v=4",
+        imageUrl: aboutContent.me.githubAvatar,
         url: "https://github.com/zulip/zulip/pull/32132"
       },
       {
         title: "sidebar: Fix deactivated user visibility in sidebar.",
         prNumber: "32215",
         username: "imkeanserna",
-        imageUrl: "https://avatars.githubusercontent.com/u/156565248?v=4",
+        imageUrl: aboutContent.me.githubAvatar,
         url: "https://github.com/zulip/zulip/pull/32215"
       }
     ]
@@ -51,7 +53,7 @@ export const contributionsData: Contribution[] = [
         title: "feat: Adding Multi-language repo selected.",
         prNumber: "21",
         username: "imkeanserna",
-        imageUrl: "https://avatars.githubusercontent.com/u/156565248?v=4",
+        imageUrl: aboutContent.me.githubAvatar,
         url: "https://github.com/MohamedDanis/opnhub/pull/21"
       }
     ]
@@ -68,14 +70,14 @@ export const contributionsData: Contribution[] = [
         title: "fix: Fix Meeting Creation Order.",
         prNumber: "63",
         username: "imkeanserna",
-        imageUrl: "https://avatars.githubusercontent.com/u/156565248?v=4",
+        imageUrl: aboutContent.me.githubAvatar,
         url: "https://github.com/Cefalo/quick-meet/pull/63"
       },
       {
         title: "Feature/UI duration format #55",
         prNumber: "58",
         username: "imkeanserna",
-        imageUrl: "https://avatars.githubusercontent.com/u/156565248?v=4",
+        imageUrl: aboutContent.me.githubAvatar,
         url: "https://github.com/Cefalo/quick-meet/pull/58"
       }
     ]

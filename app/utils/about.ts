@@ -6,9 +6,10 @@ export const aboutContent = {
   intro: "Hey, I'm a fullstack developer based in Philippines.",
   me: {
     name: "Kean Serna",
-    avatar: "https://media.licdn.com/dms/image/v2/D5603AQGbZDgzSCOz4A/profile-displayphoto-shrink_800_800/B56ZQqUDG3GQAk-/0/1735876686919?e=1749686400&v=beta&t=NLKAYSafJmg06xs3m-R6c9hEAcjlmI4-MLtekWYhBs4",
+    avatar: "/me/linkedIn-image.webp",
     github: "https://github.com/imkeanserna",
-    linkedin: "https://www.linkedin.com/in/kean-de-la-serna-b7a182260/"
+    githubAvatar: "https://avatars.githubusercontent.com/u/156565248?v=4",
+    linkedin: "https://www.linkedin.com/in/kean-serna-b7a182260/"
   },
   experience: "I have been building software in",
   tags: {

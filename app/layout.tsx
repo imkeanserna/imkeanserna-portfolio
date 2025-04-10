@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeProvider";
-import ThemeToggle from "@/components/ui/ThemeToggle";
 import ThemeScript from "@/components/ThemeScript";
+import NavigationBar from "@/components/NavigationBar";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,12 +32,12 @@ export default function RootLayout({
       </head>
       <body
         className={`antialiased ${geistSans.variable} ${geistMono.variable}
-        relative flex h-full flex-col pt-[2rem] pb-[6rem] sm:pt-[4rem] sm:pb-[8rem]">
+        relative flex h-full flex-col pt-[2rem] pb-[10rem] sm:pt-[6rem] sm:pb-[8rem]">
       `}
       >
         <ThemeProvider>
-          <ThemeToggle />
           {children}
+          <NavigationBar />
         </ThemeProvider>
       </body>
     </html>
