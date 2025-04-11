@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧑‍💻 [imkeanserna.dev](https://imkeanserna-porfolio.keandelaserna22.workers.dev/) — Personal Portfolio
+A modern, responsive portfolio website built with Next.js 15 and deployed on Cloudflare.
 
-## Getting Started
+## <h3 name="snap-and-fix">🚀&nbsp; Features</h3>
+- Modern Stack: Built with Next.js 15 and React 19
+- Performance-Focused: Optimized for speed with Cloudflare deployment
+- Responsive Design: Looks great on all devices
+- GitHub Activity Integration: Showcases contributions with GitHub Calendar
+- Smooth Animations: Powered by Framer Motion
+- Accessibility: Built with a11y in mind using Radix UI components
 
-First, run the development server:
+## <h3 name="snap-and-fix">🛠️&nbsp; Tech Stack</h3>
+- Framework: [Next.js 15](https://nextjs.org/)
+- Frontend: [React 19](https://react.dev/blog/2024/12/05/react-19)
+- Styling: [Tailwind CSS 4](https://tailwindcss.com/)
+- Animation: [Framer Motion](https://www.npmjs.com/package/framer-motion)
+- Component Library: [Radix UI](https://www.radix-ui.com/)
+- Deployment: [Cloudflare](https://www.cloudflare.com/)
+- Icons: [Lucide React](https://lucide.dev/guide/packages/lucide-react)
+
+
+## <h3 name="snap-and-fix">🚀&nbsp; Getting Started</h3>
+<h4>Installation</h4>
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+1. Clone the repository
+git clone https://github.com/yourusername/imkeanserna-portfolio.git
+cd imkeanserna-portfolio
+
+2. Install dependencies
+pnpm install
+
+3. Start the development server
 pnpm dev
-# or
-bun dev
+
+4. Open http://localhost:3000 in your browser
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## <h3 name="snap-and-fix">🤝&nbsp; Contributing</h3>
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## <h3 name="snap-and-fix">👤&nbsp; Contact</h3>
+Kean Serna
+- [imkeanserna.dev](https://imkeanserna-porfolio.keandelaserna22.workers.dev/)
+- [LinkedIn](https://www.linkedin.com/in/kean-serna-b7a182260/)
+- [Twitter](https://x.com/imkeanserna)
