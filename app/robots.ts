@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/', '/admin/'],
     },
-    sitemap: 'https://imkeanserna-porfolio.keandelaserna22.workers.dev/sitemap.xml',
+    sitemap: 'https://www.imkeanserna.dev/sitemap.xml',
   }
 }

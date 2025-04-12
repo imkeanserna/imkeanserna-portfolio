@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://imkeanserna-porfolio.keandelaserna22.workers.dev',
+      url: 'https://www.imkeanserna.dev',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,

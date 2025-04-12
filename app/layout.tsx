@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://imkeanserna-porfolio.keandelaserna22.workers.dev'),
+  metadataBase: new URL('https://www.imkeanserna.dev'),
   title: {
     default: "Kean Serna • Fullstack Developer",
     template: "%s | Kean Serna",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     "Drizzle",
     "HuggingFace"
   ],
-  authors: [{ name: "Kean Serna", url: "https://imkeanserna-porfolio.keandelaserna22.workers.dev" }],
+  authors: [{ name: "Kean Serna", url: "https://www.imkeanserna.dev" }],
   creator: "Kean Serna",
   publisher: "Kean Serna",
   formatDetection: {
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://imkeanserna-porfolio.keandelaserna22.workers.dev",
+    url: "https://www.imkeanserna.dev",
     siteName: "Kean Serna Portfolio",
     title: "Kean Serna • Fullstack Developer",
     description: "Professional portfolio showcasing web development projects, skills, and work experience.",
@@ -120,7 +120,7 @@ export const metadata: Metadata = {
   },
   manifest: '/favicon/manifest.json',
   alternates: {
-    canonical: "https://imkeanserna-porfolio.keandelaserna22.workers.dev",
+    canonical: "https://www.imkeanserna.dev",
   },
   category: "technology",
 };
@@ -141,7 +141,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Kean Serna",
-              "url": "https://imkeanserna-porfolio.keandelaserna22.workers.dev",
+              "url": "https://www.imkeanserna.dev",
               "image": "../app/favicon-for-public/web-app-manifest-512x512.png",
               "jobTitle": "Fullstack Developer",
               "sameAs": [
