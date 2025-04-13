@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     description: "Professional portfolio showcasing web development projects, skills, and work experience.",
     images: [
       {
-        url: "../app/favicon-for-public/web-app-manifest-512x512.png", // Create this image (1200x630px) for social sharing
+        url: "https://www.imkeanserna.dev/favicon/social-media-sharing.png",
         width: 1200,
         height: 630,
         alt: "Kean Serna - Portfolio Preview",
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     title: "Kean Serna",
     description: "Professional portfolio showcasing web development projects, skills, and work experience.",
     creator: "https://x.com/imkeanserna",
-    images: ["../app/favicon-for-public/web-app-manifest-512x512.png"],
+    images: ["https://www.imkeanserna.dev/favicon/icon1.png"],
   },
   robots: {
     index: true,
@@ -142,7 +142,7 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Kean Serna",
               "url": "https://www.imkeanserna.dev",
-              "image": "../app/favicon-for-public/web-app-manifest-512x512.png",
+              "image": "https://www.imkeanserna.dev/favicon/icon1.png",
               "jobTitle": "Fullstack Developer",
               "sameAs": [
                 "https://www.linkedin.com/in/kean-serna-b7a182260/",
@@ -150,6 +150,23 @@ export default function RootLayout({
                 "https://x.com/imkeanserna"
               ],
               "skills": "React, Next.js, JavaScript, TypeScript, CSS, Tailwind, Python, Hono.js, Monorepo, Microservice, Cloudflare, AWS, AI SDK, Docker, Kubernetes, Redis, Apache Kafka, Helm, Grafana, Prisma, Drizzle, HuggingFace" // Update with your actual skills
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Kean Serna Portfolio",
+              "url": "https://www.imkeanserna.dev",
+              "image": "https://www.imkeanserna.dev/favicon/icon1.png",
+              "description": "Professional portfolio of Kean Serna, a web developer specializing in React, Next.js, and modern frontend technologies.",
+              "author": {
+                "@type": "Person",
+                "name": "Kean Serna"
+              }
             }),
           }}
         />
