@@ -9,7 +9,7 @@ export const projectsData = [
     name: "ChessRoyal",
     description: "Premium Chess Experience",
     githubUrl: "https://github.com/imkeanserna/ChessRoyal",
-    websiteUrl: "https://chessroyal.onrender.com/"
+    websiteUrl: "https://chessroyal.vercel.app/"
   },
   {
     name: "IntelleQuiz",

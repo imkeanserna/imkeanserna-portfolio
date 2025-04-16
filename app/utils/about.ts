@@ -28,7 +28,7 @@ export const aboutContent = {
     closing: "on the court."
   },
   github: {
-    today: "2025-04-07",
+    today: "2025-04-16",
     username: "imkeanserna"
   },
   resume: {
