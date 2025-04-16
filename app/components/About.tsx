@@ -67,7 +67,7 @@ export default function About() {
         <h2 className="sm:text-left font-mono hidden sm:inline font-normal mt-2 text-muted-foreground/60 text-xs lowercase tracking-tight before:content-[&quot;/&quot;] my-0 leading-[1.5] align-middle">
           About
         </h2>
-        <div className=" prose max-w-screen-md">
+        <div className="prose max-w-screen-md overflow-x-hidden">
           <div className=" prose-p:my-0 flex max-w-screen-xs flex-col gap-2.5 text-muted-foreground">
             <p>{intro}</p>
             <p>

@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useRef, useEffect } from 'react';
 
 interface HoverStyles {
@@ -8,7 +6,7 @@ interface HoverStyles {
   };
 }
 
-export const useBlogTitleHover = (dependencies: any[] = []) => {
+export const useBlogTitleHover = (dependencies: number[] = []) => {
   const titleRefs = useRef<{
     [key: string]: HTMLSpanElement | null;
   }>({});
