@@ -19,11 +19,13 @@ import {
   TypeScriptIcon
 } from "@/components/Icons";
 import { Contribution, contributionsData } from "@/utils/contribution";
+import { useBlogTitleHover } from "@/hooks/useBlogTitleHover";
 
 export default function OpenSource() {
   const { theme } = useTheme();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedContribution, setSelectedContribution] = useState<Contribution | null>(null);
+  const { titleRefs, hoverBgStyles } = useBlogTitleHover([contributionsData.length]);
 
   const handleShowContributions = (contribution: Contribution) => {
     setSelectedContribution(contribution);
@@ -46,6 +48,8 @@ export default function OpenSource() {
               techs={contribution.techs}
               theme={theme}
               onShowAllClick={() => handleShowContributions(contribution)}
+              titleRef={(el) => { titleRefs.current[contribution.name] = el; }}
+              hoverStyle={hoverBgStyles[contribution.name]}
             />
           ))}
         </div>
@@ -69,6 +73,8 @@ type ContributionCardProps = {
   techs: string[];
   theme: string | undefined;
   onShowAllClick: () => void;
+  titleRef: (el: HTMLSpanElement | null) => void;
+  hoverStyle: { width: string } | undefined;
 };
 
 function ContributionCard({
@@ -77,7 +83,9 @@ function ContributionCard({
   description,
   techs,
   theme,
-  onShowAllClick
+  onShowAllClick,
+  titleRef,
+  hoverStyle
 }: ContributionCardProps) {
   return (
     <TooltipProvider delayDuration={100}>
@@ -90,14 +98,25 @@ function ContributionCard({
               transition-shadows duration-300`}
           >
             <div>
-              <h2 className="mb-1 font-medium tracking-tight">
+              <h2 className="mb-1 font-medium tracking-tight group-hover:text-sky-500">
                 <a
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative inline-block after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-current group-hover:after:w-full after:transition-all after:duration-300"
+                  className="relative inline-block group"
                 >
-                  <span data-br=":rf:" data-brr="1">{name}</span>
+                  <span
+                    ref={titleRef}
+                    className="relative z-10"
+                    data-br=":rf:"
+                    data-brr="1"
+                  >
+                    {name}
+                  </span>
+                  <span
+                    className="absolute inset-0 bg-sky-500 h-4 opacity-0 z-10 transform -rotate-4 translate-y-1/2 group-hover:opacity-30 duration-150 ease-in-out scale-x-0 group-hover:scale-x-100 origin-center"
+                    style={hoverStyle || {}}
+                  ></span>
                 </a>
               </h2>
               <div className="flex w-full flex-row items-baseline justify-between">
@@ -251,7 +270,7 @@ function ContributionItem({
       }}
       className={`group border border-border relative gap-2 overflow-hidden rounded-lg 
         bg-background focus:ring-4 hover:ring-4 p-4
-        ${theme === "dark" ? "hover:ring-white/20 focus:ring-white/20 ring-offset-gray-900 hover:ring-offset-1" : "hover:ring-gray-500/30 ring-offset-white hover:ring-offset-1"} 
+        ${theme === "dark" ? "hover:ring-sky-500 focus:ring-white/20 ring-offset-gray-900 hover:ring-offset-1" : "hover:ring-gray-500/30 ring-offset-white hover:ring-offset-1"} 
         transition-shadows duration-300 cursor-pointer`
       }
     >

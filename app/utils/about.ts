@@ -32,6 +32,6 @@ export const aboutContent = {
     username: "imkeanserna"
   },
   resume: {
-    url: "https://www.linkedin.com/in/kean-serna-b7a182260/"
+    url: "https://media.licdn.com/dms/document/media/v2/D562DAQGVmWddz7CBoA/profile-treasury-document-pdf-analyzed/B56ZZOIEAwGUAc-/0/1745067460442?e=1746057600&v=beta&t=oxnMoStw3qfxy9pHt9xP-GVZ59nBOR6b_rKwfE6a600"
   }
 };

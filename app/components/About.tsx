@@ -22,10 +22,10 @@ export default function About() {
             <div className="relative">
               {/* Combined bubble and stick with slide-up then swing animation */}
               <div className="absolute -top-8 -left-4 sm:-left-6 animate-slide-then-swing">
-                <div className="bg-blue-500/90 text-white py-1 px-[0.56rem] rounded-lg font-medium text-xs relative -rotate-6">
+                <div className="bg-sky-500 text-white py-1 px-[0.56rem] rounded-lg font-medium text-xs relative -rotate-6 shadow-md">
                   Let&apos;s connect!
                   {/* Stick as part of the bubble */}
-                  <div className="absolute top-5 left-8 w-1 h-12 bg-blue-500/90"></div>
+                  <div className="absolute top-5 left-8 w-1 h-12 bg-sky-500 shadow-md"></div>
                 </div>
               </div>
               {/* Profile image */}
