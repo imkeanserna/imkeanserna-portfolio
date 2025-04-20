@@ -18,6 +18,11 @@ export const projectsData = [
     websiteUrl: "https://intellequiz.vercel.app/"
   },
   {
+    name: "Bytepoint",
+    description: "Live Medal Tracking Platform for University Events",
+    websiteUrl: "https://www.facebook.com/photo?fbid=1082895266958522&set=a.543022367612484"
+  },
+  {
     name: "TurboStack",
     description: "Deploy Cloudflare Turborepo Saas Kit",
     githubUrl: "https://github.com/imkeanserna/cloudflare-turbo-stack",

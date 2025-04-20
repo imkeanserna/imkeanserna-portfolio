@@ -3,7 +3,7 @@ import { InstagramIcon, BasketballIcon } from "@/components/Icons";
 
 export const aboutContent = {
   component: About,
-  intro: "Hey, I'm a fullstack developer based in Philippines.",
+  intro: "Hey, I'm a fullstack developer based in the Philippines.",
   me: {
     name: "Kean Serna",
     avatar: "/me/linkedIn-image.webp",
@@ -32,6 +32,6 @@ export const aboutContent = {
     username: "imkeanserna"
   },
   resume: {
-    url: "https://media.licdn.com/dms/document/media/v2/D562DAQGVmWddz7CBoA/profile-treasury-document-pdf-analyzed/B56ZZOIEAwGUAc-/0/1745067460442?e=1746057600&v=beta&t=oxnMoStw3qfxy9pHt9xP-GVZ59nBOR6b_rKwfE6a600"
+    url: "https://media.licdn.com/dms/document/media/v2/D562DAQFWfNoDT5egtg/profile-treasury-document-pdf-analyzed/B56ZZQ06y4GQAc-/0/1745112773411?e=1746057600&v=beta&t=8I3X5adrd92yeY9BEUlZeXJBa8zuSy7NDHB0ST9GQ5g"
   }
 };

@@ -25,6 +25,7 @@ export default function Projects() {
               githubUrl={project.githubUrl}
               websiteUrl={project.websiteUrl}
               isFirst={index === 0}
+              isSecond={index === 1}
             />
           ))}
         </div>
@@ -36,18 +37,19 @@ export default function Projects() {
 type ProjectCardProps = {
   name: string;
   description: string;
-  githubUrl: string;
+  githubUrl?: string;
   websiteUrl: string;
   isFirst?: boolean;
+  isSecond?: boolean;
 };
 
-export function ProjectCard({ name, description, githubUrl, websiteUrl, isFirst }: ProjectCardProps) {
+export function ProjectCard({ name, description, githubUrl, websiteUrl, isFirst, isSecond }: ProjectCardProps) {
   const { theme } = useTheme();
 
   return (
     <div
       className={`group relative flex flex-col gap-2 overflow-hidden rounded-xl border 
-        ${isFirst ? "border-amber-500/40" : "border-border"} bg-background px-4 py-3 focus:ring-4 hover:ring-4 
+        ${isFirst ? "border-amber-500/40" : isSecond ? "border-pink-500/40" : "border-border"} bg-background px-4 py-3 focus:ring-4 hover:ring-4 
         ${theme === "dark" ? "hover:ring-white/20 focus:ring-white/20 ring-offset-gray-900 hover:ring-offset-1" : "hover:ring-gray-500/30 ring-offset-white hover:ring-offset-1"} 
         transition-shadows duration-300`}
     >
@@ -64,9 +66,11 @@ export function ProjectCard({ name, description, githubUrl, websiteUrl, isFirst 
       <div
         className={`pointer-events-none absolute inset-0 bg-gradient-to-bl mix-blend-overlay ${isFirst
           ? "from-amber-400/60 to-amber-700/60 dark:from-amber-200/60 dark:to-amber-500/30"
-          : theme === "dark"
-            ? "from-neutral-200 to-neutral-500"
-            : "from-white/5 to-neutral-900/50"
+          : isSecond
+            ? `${theme === "dark" ? "from-pink-200/80 to-pink-500/80" : "from-pink-500/50 to-pink-500/50"}`
+            : theme === "dark"
+              ? "from-neutral-200 to-neutral-500"
+              : "from-white/5 to-neutral-900/50"
           }`}
       ></div>
     </div>
