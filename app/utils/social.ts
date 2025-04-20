@@ -16,7 +16,7 @@ export const socialLinks = [
   },
   {
     name: 'Gmail',
-    href: 'mailto:keandelaserna11@gmail.com',
+    href: 'mailto:imkeanserna@gmail.com',
     isLucideEmail: true
   },
 ]

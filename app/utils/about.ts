@@ -32,6 +32,6 @@ export const aboutContent = {
     username: "imkeanserna"
   },
   resume: {
-    url: "https://media.licdn.com/dms/document/media/v2/D562DAQFWfNoDT5egtg/profile-treasury-document-pdf-analyzed/B56ZZQ06y4GQAc-/0/1745112773411?e=1746057600&v=beta&t=8I3X5adrd92yeY9BEUlZeXJBa8zuSy7NDHB0ST9GQ5g"
+    url: "https://www.imkeanserna.dev/resume/kean-dela-serna-ph-full-stack-developer.pdf"
   }
 };
