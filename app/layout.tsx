@@ -145,7 +145,7 @@ export default function RootLayout({
               "image": "https://www.imkeanserna.dev/favicon/icon1.png",
               "jobTitle": "Fullstack Developer",
               "sameAs": [
-                "https://www.linkedin.com/in/kean-serna-b7a182260/",
+                "https://www.linkedin.com/in/kean-serna/",
                 "https://github.com/imkeanserna",
                 "https://x.com/imkeanserna"
               ],

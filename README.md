@@ -42,5 +42,5 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## <h3 name="snap-and-fix">👤&nbsp; Contact</h3>
 Kean Serna
 - [imkeanserna.dev](https://imkeanserna-porfolio.keandelaserna22.workers.dev/)
-- [LinkedIn](https://www.linkedin.com/in/kean-serna-b7a182260/)
+- [LinkedIn](https://www.linkedin.com/in/kean-serna/)
 - [Twitter](https://x.com/imkeanserna)

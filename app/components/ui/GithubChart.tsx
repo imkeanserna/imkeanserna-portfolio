@@ -13,14 +13,14 @@ type ContributionTypeDate = {
 export function GithubChart() {
   const { theme } = useTheme();
   const { github } = aboutContent;
-  const selectLastSixMonths = (contributions: ContributionTypeDate[]): ContributionTypeDate[] => {
-    const today = new Date(github.today);
-    const sixMonthsAgo = new Date();
-    sixMonthsAgo.setMonth(today.getMonth() - 9);
+  const endDate = new Date(github.today);
+  const startDate = new Date(endDate);
+  startDate.setMonth(endDate.getMonth() - 9);
 
+  const selectFixedDateRange = (contributions: ContributionTypeDate[]): ContributionTypeDate[] => {
     return contributions.filter(activity => {
       const activityDate = new Date(activity.date);
-      return activityDate >= sixMonthsAgo && activityDate <= today;
+      return activityDate >= startDate && activityDate <= endDate;
     });
   };
 
@@ -34,7 +34,7 @@ export function GithubChart() {
         blockSize={10}
         colorScheme={theme}
         hideMonthLabels={true}
-        transformData={selectLastSixMonths}
+        transformData={selectFixedDateRange}
         labels={{
           totalCount: '{{count}} contributions in the last six months',
         }}

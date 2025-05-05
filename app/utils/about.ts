@@ -9,7 +9,7 @@ export const aboutContent = {
     avatar: "/me/linkedIn-image.webp",
     github: "https://github.com/imkeanserna",
     githubAvatar: "https://avatars.githubusercontent.com/u/156565248?v=4",
-    linkedin: "https://www.linkedin.com/in/kean-serna-b7a182260/"
+    linkedin: "https://www.linkedin.com/in/kean-serna/"
   },
   experience: "I have been building software in",
   tags: {
@@ -28,7 +28,7 @@ export const aboutContent = {
     closing: "on the court."
   },
   github: {
-    today: "2025-04-16",
+    today: "2025-05-05",
     username: "imkeanserna"
   },
   resume: {
