@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import HomeContent from "@/components/HomeContent";
+import { Background } from '@/components/Background';
 
 export const metadata: Metadata = {
   title: 'Kean Serna • Fullstack Developer',
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="flex grow flex-col justify-center gap-12">
+      <Background />
       <HomeContent />
     </main>
   );

@@ -6,12 +6,15 @@ import { aboutContent } from "@/utils/about";
 import { ExpertiseTag } from "@/components/Tags";
 import React from "react";
 import { useRouter } from "next/navigation";
+import { useTheme } from "@/context/ThemeProvider";
 
 export default function About() {
   const { intro, me, experience, tags, passion, hobbies } = aboutContent;
   const InstagramIcon = hobbies.instagram;
   const BasketballIcon = hobbies.basketball;
   const router = useRouter();
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
 
   return (
     <div className="flex flex-col gap-8">
@@ -33,7 +36,10 @@ export default function About() {
                 onClick={() => {
                   router.push(me.linkedin);
                 }}
-                className="w-[100px] h-[100px] cursor-pointer rounded-full overflow-hidden ring-6 ring-ring relative group"
+                className={`w-[100px] h-[100px] cursor-pointer rounded-full overflow-hidden relative group ${isDark
+                  ? "ring-6 ring-gray-300/20"
+                  : "ring-6 ring-ring"
+                  }`}
               >
                 <Image
                   alt={me.name}
