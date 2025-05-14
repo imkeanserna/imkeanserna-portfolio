@@ -415,3 +415,138 @@
   --tw-bg-opacity: 1;
   background-color: rgb(249 115 22/var(--tw-bg-opacity));
 }
+
+@keyframes hovering {
+  0% {
+    transform: translate(0px, 0px);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  15% {
+    transform: translate(-25px, 35px);
+    animation-timing-function: ease-out;
+  }
+
+  30% {
+    transform: translate(40px, 15px);
+    animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+  }
+
+  50% {
+    transform: translate(25px, -30px);
+    animation-timing-function: ease-in-out;
+  }
+
+  70% {
+    transform: translate(-35px, -20px);
+    animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1);
+  }
+
+  85% {
+    transform: translate(-15px, 10px);
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes customCursorSequence {
+
+  /* Stop for 4 seconds */
+  0%,
+  20% {
+    transform: translate(0px, 0px);
+  }
+
+  /* Move up slowly */
+  22% {
+    transform: translate(0px, -5px);
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+
+  /* Continue moving up slowly */
+  24% {
+    transform: translate(0px, -15px);
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+
+  /* Move down slowly */
+  26% {
+    transform: translate(0px, -5px);
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+
+  28% {
+    transform: translate(0px, 0px);
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+    /* Very smooth easing */
+  }
+
+  /* Second up movement - slowly */
+  30% {
+    transform: translate(0px, -5px);
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+
+  32% {
+    transform: translate(0px, -15px);
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+
+  /* Second down movement - slowly */
+  34% {
+    transform: translate(0px, -5px);
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  }
+
+  36% {
+    transform: translate(0px, 0px);
+    animation-timing-function: ease-out;
+  }
+
+  /* Move a little to the left (50px) */
+  40% {
+    transform: translate(-50px, 0px);
+    animation-timing-function: ease-out;
+  }
+
+  /* Move fast to the left (250px) */
+  45% {
+    transform: translate(-250px, 0px);
+    animation-timing-function: ease-out;
+  }
+
+  /* Stop at -250px for 5 seconds */
+  45%,
+  65% {
+    transform: translate(-250px, 0px);
+  }
+
+  /* Move up 90 degrees */
+  70% {
+    transform: translate(-250px, -100px);
+    animation-timing-function: ease-in-out;
+  }
+
+  /* Go further left before returning */
+  75% {
+    transform: translate(-300px, -100px);
+    animation-timing-function: ease-in;
+  }
+
+  /* Return to starting point */
+  85%,
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.animate-hovering {
+  animation: hovering 12s infinite;
+}
+
+.animate-custom-sequence {
+  animation: customCursorSequence 20s infinite;
+}
