@@ -8,7 +8,9 @@ import Projects from "@/components/Projects";
 import OpenSource from "@/components/OpenSource";
 import Skills from "@/components/Skills";
 import { useSequentialAnimation } from "@/hooks/useSequentialAnimation";
-import Blogs from "./Blogs";
+import Blogs from "@/components/Blogs";
+import SubscribeForm from "@/components/SubscribeForm";
+import Footer from "@/components/Footer";
 
 export default function HomeContent() {
   const [isLoaded, { containerVariants, sectionVariants }] = useSequentialAnimation(
@@ -45,6 +47,12 @@ export default function HomeContent() {
       </motion.div>
       <motion.div variants={sectionVariants}>
         <Blogs />
+      </motion.div>
+      <motion.div variants={sectionVariants}>
+        <SubscribeForm />
+      </motion.div>
+      <motion.div variants={sectionVariants}>
+        <Footer />
       </motion.div>
     </motion.main>
   );
