@@ -3,43 +3,50 @@
 import { useTheme } from "@/context/ThemeProvider";
 import { socialLinks } from "@/utils/social";
 import ThemeToggle from "@/components/ui/ThemeToggle";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/Tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/Tooltip";
 import NavItem from "@/components/ui/NavItem";
 import { HomeIcon } from "@/components/Icons";
-import { aboutContent } from "@/utils/about";
 
 export default function NavigationBar() {
   const { theme } = useTheme();
-  const { resume } = aboutContent;
+  // const { resume } = aboutContent;
 
   const scrollToTop = (): void => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
   return (
     <div className="fixed right-4 bottom-9 hsm:bottom-8 left-4">
       <div className="relative w-max mx-auto">
-        {/*Resume Button*/}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`absolute -top-5 right-5 px-2 py-[0.2rem] text-xs rounded-t-md font-medium cursor-pointer 
-             resume-background-color brightness-95
-             text-white shadow-md hover:shadow-lg
-             border border-orange-300
-             transition-all duration-300 ease-in-out
-             hover:from-orange-500 hover:to-amber-600
-             hover:-translate-y-0.5 active:scale-[0.98]`}
-          href={resume.url}
-        >
-          Resume
-        </a>
+        {/*Resume Button* - current hidden/}
+        {/* <a */}
+        {/*   target="_blank" */}
+        {/*   rel="noopener noreferrer" */}
+        {/*   className={`absolute -top-5 right-5 px-2 py-[0.2rem] text-xs rounded-t-md font-medium cursor-pointer  */}
+        {/*      resume-background-color brightness-95 */}
+        {/*      text-white shadow-md hover:shadow-lg */}
+        {/*      border border-orange-300 */}
+        {/*      transition-all duration-300 ease-in-out */}
+        {/*      hover:from-orange-500 hover:to-amber-600 */}
+        {/*      hover:-translate-y-0.5 active:scale-[0.98]`} */}
+        {/*   href={resume.url} */}
+        {/* > */}
+        {/*   Resume */}
+        {/* </a> */}
         <div
           className={`mt-8 flex h-[58px] gap-2 rounded-2xl border border-border p-2 backdrop-blur-md 
-            ${theme === "dark" ? "supports-backdrop-blur:bg-black/10" : "supports-backdrop-blur:bg-white/10"
+            ${
+              theme === "dark"
+                ? "supports-backdrop-blur:bg-black/10"
+                : "supports-backdrop-blur:bg-white/10"
             } items-center transition-transform duration-300 ease-in-out hover:scale-105 group`}
         >
           {/* Home Button */}
@@ -94,7 +101,13 @@ export default function NavigationBar() {
                     </a>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent side="top" align="center" sideOffset={6} data-state="instant-open" className="animate-fadeIn">
+                <TooltipContent
+                  side="top"
+                  align="center"
+                  sideOffset={6}
+                  data-state="instant-open"
+                  className="animate-fadeIn"
+                >
                   {social.name}
                 </TooltipContent>
               </Tooltip>
@@ -124,7 +137,13 @@ const ThemeToggleItem: React.FC = () => {
             <ThemeToggle />
           </div>
         </TooltipTrigger>
-        <TooltipContent side="top" align="center" sideOffset={6} data-state="instant-open" className="animate-fadeIn">
+        <TooltipContent
+          side="top"
+          align="center"
+          sideOffset={6}
+          data-state="instant-open"
+          className="animate-fadeIn"
+        >
           {theme === "dark" ? "Light" : "Dark"}
         </TooltipContent>
       </Tooltip>

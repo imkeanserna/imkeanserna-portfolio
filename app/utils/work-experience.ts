@@ -32,22 +32,22 @@ export const workExperienceData: WorkExperienceItemData[] = [
       fontWeight: "bold",
       yPosition: 250,
       color: "black",
-      gradientId: ""
-    }
+      gradientId: "",
+    },
   },
   {
     id: "deped",
     title: "Full-stack Engineering Intern",
     company: "Deped.gov.ph",
-    period: "July 2024- Sept 2024",
+    period: "July 2024 - Sept 2024",
     logoType: "text",
     logoConfig: {
       text: "DepEd",
       fontSize: 240,
       fontWeight: "bold",
       yPosition: 150,
-      gradientId: "depedGradient"
-    }
+      gradientId: "depedGradient",
+    },
   },
   {
     id: "hacktoberfest",
@@ -61,9 +61,23 @@ export const workExperienceData: WorkExperienceItemData[] = [
       fontSize: 150,
       fontWeight: "bold",
       yPosition: 60,
-      gradientId: "hacktoberfestGradient"
-    }
-  }
+      gradientId: "hacktoberfestGradient",
+    },
+  },
+  {
+    id: "village88",
+    title: "Full-stack Developer Trainee",
+    company: "Village88.com",
+    period: "Jan 2023 - Apr 2023",
+    logoType: "text",
+    logoConfig: {
+      text: "VILLAGE 88",
+      fontSize: 170,
+      fontWeight: "bold",
+      yPosition: 90,
+      gradientId: "village88Gradient",
+    },
+  },
 ];
 
 export const workExperienceGradients = {
@@ -71,21 +85,28 @@ export const workExperienceGradients = {
     id: "instafixGradient",
     stops: [
       { offset: "0%", color: "#32CD32" },
-      { offset: "100%", color: "#006400" }
-    ]
+      { offset: "100%", color: "#006400" },
+    ],
   },
   depedGradient: {
     id: "depedGradient",
     stops: [
       { offset: "0%", color: "#0047AB" },
-      { offset: "100%", color: "#ED1C24" }
-    ]
+      { offset: "100%", color: "#ED1C24" },
+    ],
   },
   hacktoberfestGradient: {
     id: "hacktoberfestGradient",
     stops: [
       { offset: "0%", color: "#32CD32" },
-      { offset: "100%", color: "#006400" }
-    ]
-  }
+      { offset: "100%", color: "#006400" },
+    ],
+  },
+  village88Gradient: {
+    id: "village88Gradient",
+    stops: [
+      { offset: "0%", color: "#0066CC" },
+      { offset: "100%", color: "#003366" },
+    ],
+  },
 };

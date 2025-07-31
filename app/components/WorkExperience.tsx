@@ -1,12 +1,16 @@
 "use client";
 
-import { workExperienceData, workExperienceGradients, WorkExperienceItemData } from "@/utils/work-experience";
+import {
+  workExperienceData,
+  workExperienceGradients,
+  WorkExperienceItemData,
+} from "@/utils/work-experience";
 
 export default function WorkExperience() {
   return (
     <div className="flex flex-col">
       <section className="mx-auto w-full px-5 sm:px-8 max-w-screen-md grid sm:grid-cols-[75px_1fr] gap-x-6 gap-y-4 py-0 items-start">
-        <h2 className="sm:text-start font-mono font-normal mt-2 text-muted-foreground/60 text-xs lowercase tracking-tight before:content-[&quot;/&quot;] my-0 leading-[1.5] inline align-middle">
+        <h2 className='sm:text-start font-mono font-normal mt-2 text-muted-foreground/60 text-xs lowercase tracking-tight before:content-["/"] my-0 leading-[1.5] inline align-middle'>
           Work Experience
         </h2>
         <div className="grid gap-6 sm:grid-cols-1">
@@ -27,7 +31,7 @@ export default function WorkExperience() {
   );
 }
 
-type WorkExperienceItemProps = Omit<WorkExperienceItemData, 'id'>;
+type WorkExperienceItemProps = Omit<WorkExperienceItemData, "id">;
 
 export function WorkExperienceItem({
   title,
@@ -39,15 +43,34 @@ export function WorkExperienceItem({
 }: WorkExperienceItemProps) {
   const renderLogo = () => {
     if (logoType === "text") {
-      const gradient = logoConfig.gradientId ? workExperienceGradients[logoConfig.gradientId as keyof typeof workExperienceGradients] : null;
+      const gradient = logoConfig.gradientId
+        ? workExperienceGradients[
+            logoConfig.gradientId as keyof typeof workExperienceGradients
+          ]
+        : null;
 
       return (
-        <svg width="100%" height="160" viewBox="0 0 1000 160" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="100%"
+          height="160"
+          viewBox="0 0 1000 160"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           {gradient && (
             <defs>
-              <linearGradient id={gradient.id} x1="0%" y1="0%" x2="100%" y2="0%">
+              <linearGradient
+                id={gradient.id}
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
                 {gradient.stops.map((stop, index) => (
-                  <stop key={index} offset={stop.offset} stopColor={stop.color} />
+                  <stop
+                    key={index}
+                    offset={stop.offset}
+                    stopColor={stop.color}
+                  />
                 ))}
               </linearGradient>
             </defs>
@@ -60,7 +83,11 @@ export function WorkExperienceItem({
             fontSize={logoConfig.fontSize || 100}
             fontStyle={logoConfig.fontStyle || "normal"}
             fontWeight={logoConfig.fontWeight || "normal"}
-            fill={logoConfig.gradientId ? `url(#${logoConfig.gradientId})` : logoConfig.color || "currentColor"}
+            fill={
+              logoConfig.gradientId
+                ? `url(#${logoConfig.gradientId})`
+                : logoConfig.color || "currentColor"
+            }
           >
             {logoConfig.text}
           </text>
